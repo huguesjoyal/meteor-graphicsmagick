@@ -1,20 +1,20 @@
-I am using this dockerfile for Meteor + Graphicsmagick and using MUP to deploy it. 
+I am using this dockerfile for Meteor + Graphicsmagick and using MUP to deploy it.
 
 Make this change to your mup.js file
 
 
     docker: {
-      image: "joshjoe/meteor-graphicsmagick",
+      image: "huguesjoyal/meteor-graphicsmagick",
     },
-    
-Then make sure you are also making a volume available to docker if you want to map something to a permenant location so your files arenn't deleted when you do new mup deploys. 
+
+Then make sure you are also making a volume available to docker if you want to map something to a permenant location so your files arenn't deleted when you do new mup deploys.
 
 
     volumes: {
       "/opt/uploads": "/uploads"
     },
-    
-Here is my whole mup.js file for reference. 
+
+Here is my whole mup.js file for reference.
 
 ```
 module.exports = {
